@@ -4,11 +4,12 @@ import { addUser } from "../services/company";
 import { Paper, TextField, Button } from "@material-ui/core";
 import * as yup from "yup";
 import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
 
 
 function AddForm(props) {
+  const history = useNavigate()
   const companies = useSelector((state) => state.companies.list.length);
-  console.log(companies);
   const dispatch = useDispatch();
   const validationSchema = yup.object({
     name: yup
@@ -35,7 +36,8 @@ function AddForm(props) {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       dispatch(addUser(values));
-      console.log(values)
+            history('/',{replace:true})
+
     },
   });
   return (
