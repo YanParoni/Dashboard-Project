@@ -8,7 +8,7 @@ function AddButon() {
       <Link style={{textDecoration: 'none'}}
       to='/addUser'>
       <Button variant='outlined' endIcon={<AddCircleOutlineOutlinedIcon/>}>
-          New User
+          Add User
       </Button>
       </Link>
   );
