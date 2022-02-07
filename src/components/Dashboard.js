@@ -7,7 +7,6 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Button,
   Paper,
   IconButton,
 } from "@material-ui/core";
@@ -28,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Dashboard = () => {
   const companies = useSelector((state) => state.companies.list);
-  const status = useSelector((state) => state.companies.status);
   let rows = [];
   const [columns, setColumns] = useState();
   const [row, setRow] = useState([]);

@@ -1,18 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { edit } from "../services/company";
 import { useNavigate } from "react-router-dom";
 import { Paper, TextField, Button } from "@material-ui/core";
 import * as yup from "yup";
 import { useFormik } from "formik";
-import { getById } from "../services/company";
-import { useParams } from "react-router-dom";
 
 
 function EditForm() {
-  const param = useParams();
   const dispatch = useDispatch();
-
   const selected = useSelector((state) => state.companies.selected);
 
   

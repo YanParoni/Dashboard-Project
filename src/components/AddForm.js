@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser } from "../services/company";
-import { useNavigate } from "react-router-dom";
 import { Paper, TextField, Button } from "@material-ui/core";
 import * as yup from "yup";
 import { useFormik } from "formik";
 
 
 function AddForm(props) {
-  let history = useNavigate();
   const companies = useSelector((state) => state.companies.list.length);
   console.log(companies);
   const dispatch = useDispatch();
